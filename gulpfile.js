@@ -45,18 +45,18 @@ gulp.task("server",function(){
 
 gulp.task("server1",function(){
 	plugins.connect.server({
-		root:["./dest"],
+		root:["./mask"],
 		port:999,
 		livereload:true
 	})
 })
 //保存浏览器显示效果
 gulp.task("html",function(){
-	gulp.src("./dest/*.html")
+	gulp.src("./mask/*.html")
 		.pipe(plugins.connect.reload())
 })
 gulp.task("watch2",function(){
-	gulp.watch("./dest/*.html",["html"])
+	gulp.watch("./mask/*.html",["html"])
 })
 gulp.task("default",["watch2","server1"])
 
