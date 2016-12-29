@@ -52,7 +52,7 @@ gulp.task("server1",function(){
 })
 //保存浏览器显示效果
 gulp.task("html",function(){
-	gulp.src("./mask/*.html")
+	gulp.src("./docs/*.html")
 		.pipe(plugins.connect.reload())
 })
 gulp.task("watch2",function(){
@@ -66,9 +66,9 @@ gulp.task('revCollector', function () {
         .pipe( plugins.revCollector({
             replaceReved: true,
             dirReplacements: {                
-                'dest/js/': '../dist/js/',
-                "css/":"../dist/js"
+                'dest/js/': 'dist/js/',
+                "css/":"dist/js"
             }
         }) )
-        .pipe( gulp.dest('./mask') );
+        .pipe( gulp.dest('./') );
 });

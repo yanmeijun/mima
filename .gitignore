@@ -1,5 +1,6 @@
 node_modules
-script.html
 dest
 css
 rev
+docs
+dist
